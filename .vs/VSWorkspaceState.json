@@ -1,7 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Transco",
+    "\\Transco\\Transco.Api",
+    "\\Transco\\Transco.Application",
+    "\\Transco\\Transco.Application\\Core",
+    "\\Transco\\Transco.Application\\Core\\Customers",
+    "\\Transco\\Transco.Application\\Core\\Customers\\Queries",
+    "\\Transco\\Transco.Application\\Core\\Customers\\Queries\\GetCustomerById"
   ],
-  "SelectedNode": "\\C:\\Users\\DELL 3390 2in1\\Source\\Repos\\oracle-connect",
+  "SelectedNode": "\\Transco\\Transco.Application\\Core\\Customers\\Queries\\GetCustomerById\\GetCustomerByIdQueryHandler.cs",
   "PreviewInSolutionExplorer": false
 }

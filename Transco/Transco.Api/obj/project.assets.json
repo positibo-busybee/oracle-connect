@@ -2,6 +2,48 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "MediatR/11.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MediatR.Contracts": "1.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MediatR.Contracts/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MediatR.Extensions.Microsoft.DependencyInjection/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MediatR": "[11.0.0, 12.0.0)",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore/7.0.3": {
         "type": "package",
         "dependencies": {
@@ -605,23 +647,92 @@
           }
         }
       },
-      "Transco.Data/1.0.0": {
+      "Transco.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Oracle.EntityFrameworkCore": "7.21.12",
-          "Oracle.ManagedDataAccess.Core": "3.21.120"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
+          "Transco.Infrastructure": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Transco.Data.dll": {}
+          "bin/placeholder/Transco.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Transco.Data.dll": {}
+          "bin/placeholder/Transco.Application.dll": {}
+        }
+      },
+      "Transco.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Transco.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Transco.Domain.dll": {}
+        }
+      },
+      "Transco.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.3",
+          "Oracle.EntityFrameworkCore": "7.21.12",
+          "Oracle.ManagedDataAccess.Core": "3.21.120",
+          "Transco.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Transco.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Transco.Infrastructure.dll": {}
         }
       }
     }
   },
   "libraries": {
+    "MediatR/11.0.0": {
+      "sha512": "8klzVGZQiA2oxZRzQFBZbdPD/IQUm9RYtfiyTDKhxDQ99Gi93+GXt1ZJjH2D7Lh7ZFHCv5XdkwbmfHEQBCatPg==",
+      "type": "package",
+      "path": "mediatr/11.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/netstandard2.1/MediatR.dll",
+        "lib/netstandard2.1/MediatR.xml",
+        "mediatr.11.0.0.nupkg.sha512",
+        "mediatr.nuspec"
+      ]
+    },
+    "MediatR.Contracts/1.0.1": {
+      "sha512": "NsRvOxthhkYml4DcBMyJsmym8C4MchioH7wxKVPEg7plFj9Euh/i4IcmZ3Gvgx6+K8obeuhPeJdoBl56wnuo3A==",
+      "type": "package",
+      "path": "mediatr.contracts/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/net461/MediatR.Contracts.dll",
+        "lib/net461/MediatR.Contracts.xml",
+        "lib/netstandard2.0/MediatR.Contracts.dll",
+        "lib/netstandard2.0/MediatR.Contracts.xml",
+        "mediatr.contracts.1.0.1.nupkg.sha512",
+        "mediatr.contracts.nuspec"
+      ]
+    },
+    "MediatR.Extensions.Microsoft.DependencyInjection/11.1.0": {
+      "sha512": "RW3etRuy6Xp63cgqfC0r/ITOtUT0f9ymJl1+1XZdzsYUsfv7WBPC2kXGOP8IYpY/6c4Q6805vbIW/88DopUs3w==",
+      "type": "package",
+      "path": "mediatr.extensions.microsoft.dependencyinjection/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll",
+        "mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+        "mediatr.extensions.microsoft.dependencyinjection.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore/7.0.3": {
       "sha512": "6XUI2YGoaLMoP9KGaqWmmd4B2n5bpQbXrVRpH20Et3YjQ0Rn3Ia6HM/ANcSq9rBfjfUySgo9SwUZgQ4m4PF3LQ==",
       "type": "package",
@@ -1669,16 +1780,28 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Transco.Data/1.0.0": {
+    "Transco.Application/1.0.0": {
       "type": "project",
-      "path": "../Transco.Data/Transco.Data.csproj",
-      "msbuildProject": "../Transco.Data/Transco.Data.csproj"
+      "path": "../Transco.Application/Transco.Application.csproj",
+      "msbuildProject": "../Transco.Application/Transco.Application.csproj"
+    },
+    "Transco.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Transco.Domain/Transco.Domain.csproj",
+      "msbuildProject": "../Transco.Domain/Transco.Domain.csproj"
+    },
+    "Transco.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Transco.Infrastructure/Transco.Infrastructure.csproj",
+      "msbuildProject": "../Transco.Infrastructure/Transco.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "MediatR.Extensions.Microsoft.DependencyInjection >= 11.1.0",
       "Swashbuckle.AspNetCore >= 6.5.0",
-      "Transco.Data >= 1.0.0"
+      "Transco.Application >= 1.0.0",
+      "Transco.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1708,8 +1831,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\DELL 3390 2in1\\Source\\Repos\\oracle-connect\\Transco\\Transco.Data\\Transco.Data.csproj": {
-              "projectPath": "C:\\Users\\DELL 3390 2in1\\Source\\Repos\\oracle-connect\\Transco\\Transco.Data\\Transco.Data.csproj"
+            "C:\\Users\\DELL 3390 2in1\\Source\\Repos\\oracle-connect\\Transco\\Transco.Application\\Transco.Application.csproj": {
+              "projectPath": "C:\\Users\\DELL 3390 2in1\\Source\\Repos\\oracle-connect\\Transco\\Transco.Application\\Transco.Application.csproj"
+            },
+            "C:\\Users\\DELL 3390 2in1\\Source\\Repos\\oracle-connect\\Transco\\Transco.Infrastructure\\Transco.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\DELL 3390 2in1\\Source\\Repos\\oracle-connect\\Transco\\Transco.Infrastructure\\Transco.Infrastructure.csproj"
             }
           }
         }
@@ -1724,6 +1850,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "MediatR.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[11.1.0, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.5.0, )"

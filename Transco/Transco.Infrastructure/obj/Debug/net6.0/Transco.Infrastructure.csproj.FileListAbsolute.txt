@@ -1,0 +1,15 @@
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\bin\Debug\net6.0\Transco.Infrastructure.deps.json
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\bin\Debug\net6.0\Transco.Infrastructure.dll
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\bin\Debug\net6.0\Transco.Infrastructure.pdb
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\bin\Debug\net6.0\Transco.Domain.dll
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\bin\Debug\net6.0\Transco.Domain.pdb
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\obj\Debug\net6.0\Transco.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\obj\Debug\net6.0\Transco.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\obj\Debug\net6.0\Transco.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\obj\Debug\net6.0\Transco.Infrastructure.AssemblyInfo.cs
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\obj\Debug\net6.0\Transco.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\obj\Debug\net6.0\Transco.Infrastructure.csproj.CopyComplete
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\obj\Debug\net6.0\Transco.Infrastructure.dll
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\obj\Debug\net6.0\refint\Transco.Infrastructure.dll
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\obj\Debug\net6.0\Transco.Infrastructure.pdb
+C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\obj\Debug\net6.0\ref\Transco.Infrastructure.dll

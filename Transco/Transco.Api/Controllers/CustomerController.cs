@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Transco.Data;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using Transco.Application.Core.Customers.Queries.GetAllCustomers;
 
 namespace Transco.Api.Controllers
 {
@@ -7,14 +8,16 @@ namespace Transco.Api.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        private readonly DataContext _dataContext;
-        public CustomerController(DataContext dataContext) => this._dataContext = dataContext;
+        private readonly IMediator mediator;
+        public CustomerController(IMediator mediator) => this.mediator = mediator;
 
 
         [HttpGet(Name = "GetCustomers")]
-        public IEnumerable<Customer> Get()
+        public async Task<IActionResult> GetCustomers()
         {
-            return _dataContext.Customers.ToList();
+            var result = mediator.Send(new GetAllCustomersQuery());
+
+            return Ok(result);
         }
     }
 }
