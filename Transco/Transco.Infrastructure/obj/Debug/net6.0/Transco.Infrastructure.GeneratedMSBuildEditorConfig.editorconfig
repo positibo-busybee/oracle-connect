@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Transco.Infrastructure
-build_property.ProjectDir = C:\Users\DELL 3390 2in1\Source\Repos\oracle-connect\Transco\Transco.Infrastructure\
+build_property.ProjectDir = C:\Users\DELL 3390 2in1\source\repos\oracle-connect\Transco\Transco.Infrastructure\

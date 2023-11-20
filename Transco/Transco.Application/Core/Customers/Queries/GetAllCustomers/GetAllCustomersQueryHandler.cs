@@ -15,7 +15,7 @@ namespace Transco.Application.Core.Customers.Queries.GetAllCustomers
         {
             var query = context.Customers.AsNoTracking();
 
-            var result = (await query.ToListAsync(cancellationToken))
+            var customers = (await query.ToListAsync(cancellationToken))
                 .Select(o => new CustomerResponse
                 {
                     CustomerId = o.Customerid,
@@ -25,7 +25,7 @@ namespace Transco.Application.Core.Customers.Queries.GetAllCustomers
                 .OrderBy(o => o.FullName)
                 .ToList();
 
-            return result;
+            return customers;
         }
     }
 }
